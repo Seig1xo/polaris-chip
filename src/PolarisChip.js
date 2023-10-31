@@ -17,14 +17,15 @@ export class PolarisChip extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: inline-block;
-        margin: 0 12px 12px 0;
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 33%;
+        margin: 20 px;
       }
 
       .cardcontainer {
         display: flex;
         flex-direction: column;
-        float: left;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
         margin-right: 10px;
@@ -53,7 +54,7 @@ export class PolarisChip extends LitElement {
       }
 
       a.chip img {
-        max-width: 300px;
+        max-width: 100%;
         height: auto;
       }
 
@@ -65,25 +66,22 @@ export class PolarisChip extends LitElement {
       }
 
       .imagecontainer {
-        display: block;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center; 
         align-items: center; 
       }
 
-      @media (max-width: 768px) {
-        .cardcontainer {
-          flex-direction: column;
-        }
-      }
-
       .headercontainer {
-        display: block;
+        display: inline-block;
         margin-top: 20px;
         margin-bottom: 20px;
       }
 
       h3 {
+        display: flex;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
         font-size: 20.8px;
         font-weight: 400;
         text-transform: capitalize;
@@ -96,13 +94,12 @@ export class PolarisChip extends LitElement {
       }
 
       .descriptioncontainer {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px;
       }
 
       .description {
+        display: block;
+        font-family: 'Roboto', sans-serif;
         font-size: 19.2px;
         font-weight: 100;
         color: black;
@@ -131,7 +128,7 @@ export class PolarisChip extends LitElement {
         </a>
       </div>
       <!-- date chip + heading -->
-      </div class="headercontainer">
+      <div class="headercontainer">
         <date-chip date="${this.date}"></date-chip>
         <h3>
           <a class="cardheader" href="${this.link}" target="_blank">
