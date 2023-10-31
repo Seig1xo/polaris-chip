@@ -26,7 +26,6 @@ export class PolarisChip extends LitElement {
       .cardcontainer {
         display: flex;
         flex-direction: column;
-        box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
         margin-right: 10px;
         line-height: 24px;
@@ -103,6 +102,8 @@ export class PolarisChip extends LitElement {
         font-size: 19.2px;
         font-weight: 100;
         color: black;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
       }
     `;
   }
